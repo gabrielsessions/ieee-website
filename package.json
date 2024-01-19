@@ -1,0 +1,22 @@
+{
+  "name": "ieee-website",
+  "version": "1.0.0",
+  "description": "New website for Tufts chapter of IEEE",
+  "main": "index.js",
+  "scripts": {
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ieee-website"
+  },
+  "keywords": [
+    "ieee"
+  ],
+  "author": "Gabriel Sessions",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
