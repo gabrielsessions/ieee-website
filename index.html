@@ -1,14 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tufts IEEE</title>
   <link rel="stylesheet" href="./src/output.css">
+  <script src="./src/navbar.js"></script>
 </head>
+
 <body>
-  <h1 class="text-blue-500 text-center front-semibold my-4 text-3xl">Hello, World!</h1>
-  <p class="hidden">If you can see this, something is wrong. Have you run the Tailwind build process yet?</p>
-  
+  <div class="bg-gray-50 dark:bg-gray-950">
+    <nav class="bg-gray-100">
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Mobile menu button-->
+            <button type="button" onclick="navbarToggle()"
+              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-controls="mobile-menu" aria-expanded="false">
+              <span class="absolute -inset-0.5"></span>
+              <span class="sr-only">Open main menu</span>
+
+              <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+
+              <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+            <div class="flex flex-shrink-0 items-center">
+              <a href="/">
+                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                  alt="Your Company">
+              </a>
+            </div>
+            <div class="hidden sm:ml-6 sm:block">
+              <div class="flex space-x-4">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                  aria-current="page">Home</a>
+                <a href="#"
+                  class="text-gray-900 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About Us</a>
+                <a href="#"
+                  class="text-gray-900 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Events</a>
+                <a href="#"
+                  class="text-gray-900 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="hidden sm:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+            aria-current="page">Home</a>
+          <a href="#"
+            class="text-gray-900 hover:bg-gray-900 hover:text-white block rounded-md px-3 py-2 text-base font-medium">About Us</a>
+          <a href="#"
+            class="text-gray-900 hover:bg-gray-900 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Events</a>
+          <a href="#"
+            class="text-gray-900 hover:bg-gray-900 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
+        </div>
+      </div>
+    </nav>
+    <section class="py-12 md:py-24">
+      <div class="grid items-center gap-4 px-4 text-center md:px-6 lg:gap-10">
+        <div class="space-y-4">
+          <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            Welcome to Tufts IEEE!
+          </h1>
+          <p
+            class="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+            Blurb about stuff here!
+          </p>
+          <a class="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
+            href="https://join.slack.com/t/tuftsieee/shared_invite/zt-2edf54eas-PVqmwH2jf8mGVjQG3ll3yQ">
+            Join the Slack
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="flex justify-center w-full py-12">
+      <div class="container grid gap-6 md:gap-6 lg:grid-cols-3 xl:gap-12 xl:grid-cols-4">
+
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm p-6" data-v0-t="card">
+          <div class="flex flex-col space-y-1.5 p-6">
+            <h3 class="text-2xl font-semibold whitespace-nowrap leading-none tracking-tight">About Us</h3>
+          </div>
+          <div class="p-6"><img src="/placeholder.svg" alt="About Us" class="w-full h-48 object-cover rounded-lg mb-4">
+            <p class="text-gray-500 dark:text-gray-400">
+              More text here later
+            </p>
+          </div>
+        </div>
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm p-6" data-v0-t="card">
+          <div class="flex flex-col space-y-1.5 p-6">
+            <h3 class="text-2xl font-semibold whitespace-nowrap leading-none tracking-tight">Labs & Events</h3>
+          </div>
+          <div class="p-6"><img src="/placeholder.svg" alt="Labs" class="w-full h-48 object-cover rounded-lg mb-4">
+            <p class="text-gray-500 dark:text-gray-400">
+              Even more text</p>
+          </div>
+        </div>
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm p-6" data-v0-t="card">
+          <div class="flex flex-col space-y-1.5 p-6">
+            <h3 class="text-2xl font-semibold whitespace-nowrap leading-none tracking-tight">Projects</h3>
+          </div>
+          <div class="p-6"><img src="/placeholder.svg" alt="Projects" class="w-full h-48 object-cover rounded-lg mb-4">
+            <p class="text-gray-500 dark:text-gray-400">
+              Even more text</p>
+          </div>
+        </div>
+
+
+
+      </div>
+    </section>
+  </div>
 </body>
+
 </html>
